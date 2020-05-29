@@ -23,8 +23,9 @@ import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 public class FirstTestNmTest1 {
-  // System.setProperty("webdriver.chrome.driver","/Users/incikaratay/Desktop/SELENIUM/chromedriver");
-   private WebDriver driver = new ChromeDriver();
+
+    WebDriver driver ;
+
   private Map<String, Object> vars;
   JavascriptExecutor js;
 
@@ -34,6 +35,9 @@ public class FirstTestNmTest1 {
   @Before
   public void setUp() {
     js = (JavascriptExecutor) driver;
+    System.setProperty("webdriver.chrome.driver","/Users/incikaratay/Desktop/SELENIUM/chromedriver");
+    driver = new ChromeDriver();
+
     vars = new HashMap<String, Object>();
   }
   @After
