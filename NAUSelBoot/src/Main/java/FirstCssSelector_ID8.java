@@ -15,6 +15,9 @@ public class FirstCssSelector_ID8 {
 
         // #idvalue
         driver.findElement(By.cssSelector("#NAV_BUSINESS_ADVANTAGE")).click();
+
+        // tag#idvalue
+        //driver.findElement(By.cssSelector("a#NAV_BUSINESS_ADVANTAGE")).click();
     }
 
 }
