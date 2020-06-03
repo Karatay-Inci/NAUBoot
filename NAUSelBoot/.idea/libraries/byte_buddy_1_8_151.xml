@@ -7,6 +7,10 @@
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/slnm/guava-25.0-jre.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/slnm/okhttp-3.11.0.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/slnm/okio-1.14.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/apiguardian-api-1.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/junit-jupiter-api-5.6.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/junit-platform-commons-1.6.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/opentest4j-1.2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
