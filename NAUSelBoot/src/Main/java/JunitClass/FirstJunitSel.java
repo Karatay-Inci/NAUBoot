@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FirstJunitClick {
+public class FirstJunitSel {
 
     static WebDriver driver;
     static String baseURL;
@@ -36,7 +36,7 @@ public class FirstJunitClick {
     @AfterEach
     public void done(){
         driver.navigate().refresh();
-        System.out.println("@BeforeAll - refresh the page");
+        System.out.println("@AfterEach - refresh the page");
     }
 
     @Test
