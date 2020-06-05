@@ -21,10 +21,7 @@ public class FirstJunitNavigation {
         driver.manage().window().maximize();
         driver.get(baseURL);
         System.out.println("@BeforeAll - initiated and navigated to web page ");
-        currentURL = driver.getCurrentUrl();
-        System.out.println("BeforeAll - Current URL:"+currentURL);
-        pageTitle =driver.getTitle();
-        System.out.println("@BeforeAll - page title"+pageTitle);
+        getTitleUrl(" - BeforeAll");
     }
 
     @AfterAll
@@ -34,52 +31,42 @@ public class FirstJunitNavigation {
     }
 
     @BeforeEach
-    public void init(){
+    public void init()throws InterruptedException {
         driver.navigate().refresh();
         System.out.println("@BeforeEach - refresh the page");
-        currentURL = driver.getCurrentUrl();
-        System.out.println("@BeforeEach - Current URL:"+currentURL);
-        pageTitle =driver.getTitle();
-        System.out.println("@BeforeEach - page title"+pageTitle);
+        Thread.sleep(5000);
+        getTitleUrl(" - BeforeEach");
     }
 
     @AfterEach
-    public void done(){
+    public void done()throws InterruptedException {
         driver.navigate().refresh();
         System.out.println("@AfterEach - refresh the page");
-        currentURL = driver.getCurrentUrl();
-        System.out.println("@AfterEach - Current URL:"+currentURL);
-        pageTitle =driver.getTitle();
-        System.out.println("@AfterEach - page title"+pageTitle);
+        Thread.sleep(5000);
+        getTitleUrl(" - AfterEach");
     }
 
     @Test
     public void  browserNavigated() throws InterruptedException {
-        currentURL = driver.getCurrentUrl();
-        System.out.println("@browserNavigated - Current URL before clicking practice:"+currentURL);
-        pageTitle =driver.getTitle();
-        System.out.println("@browserNavigated - page title before clicking practice:"+pageTitle);
+        getTitleUrl("@browserNavigated - before clicking practice:");
         driver.findElement(By.xpath("//a[contains(text(),'Practice')]")).click();
         System.out.println("@browserNavigated - clicking directly on practice button ");
         Thread.sleep(5000);
-        currentURL = driver.getCurrentUrl();
-        System.out.println("@browserNavigated - Current URL after clicking practice:"+currentURL);
-        pageTitle =driver.getTitle();
-        System.out.println("@browserNavigated - page title after clicking practice:"+pageTitle);
+        getTitleUrl("@browserNavigated - after clicking practice:");
         driver.navigate().back();
         System.out.println("@browserNavigated - navigated back to homepage ");
         Thread.sleep(5000);
-        currentURL = driver.getCurrentUrl();
-        System.out.println("@browserNavigated - Current URL after navigating back:"+currentURL);
-        pageTitle =driver.getTitle();
-        System.out.println("@browserNavigated - page title after navigating back:"+pageTitle);
+        getTitleUrl("@browserNavigated - after navigating back:");
         driver.navigate().forward();
         System.out.println("@browserNavigated - navigated forward from homepage to practice page ");
         Thread.sleep(5000);
-        currentURL = driver.getCurrentUrl();
-        System.out.println("@browserNavigated - Current URL after browser forward:"+currentURL);
-        pageTitle =driver.getTitle();
-        System.out.println("@browserNavigated - page title after browser forward:"+pageTitle);
+        getTitleUrl("@browserNavigated - after navigating forward:");
 
     }
+        private static  void getTitleUrl(String whereRU){
+            currentURL = driver.getCurrentUrl();
+            System.out.println("Current URL:"+whereRU+currentURL);
+            pageTitle =driver.getTitle();
+            System.out.println("page title"+whereRU+pageTitle);
+        }
 }
