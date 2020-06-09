@@ -1,6 +1,5 @@
 package Main.java.JunitClass;
 
-
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,13 +20,13 @@ public class FirstJunitSelectDrop {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(baseURL);
-        System.out.println("@BeforeAll - executed once before all test methods in this class");
+        System.out.println("@BeforeAll - initiated and navigated to web page ");
     }
 
     @AfterAll
     public static void tearDown(){
         driver.quit();
-        System.out.println("@AfterAll - executed once after all test methods in this class");
+        System.out.println("@AfterAll - closed browser session");
     }
 
     @Test
@@ -54,12 +53,6 @@ public class FirstJunitSelectDrop {
             sel.selectByVisibleText(ele.getText()); //select using the text of the option tag element
             Thread.sleep(5000);
         }
+        System.out.println("isMultiple:"+sel.isMultiple());
     }
-
-    @Test
-    public void test3(){
-        System.out.println("@Test3 - executed test");
-    }
-
-
 }
