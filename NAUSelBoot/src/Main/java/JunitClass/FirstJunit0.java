@@ -1,9 +1,8 @@
 package Main.java.JunitClass;
 
-
 import org.junit.jupiter.api.*;
 
-public class FirstJunit {
+public class FirstJunit0 {
 
     @BeforeAll
     public static void setUp(){

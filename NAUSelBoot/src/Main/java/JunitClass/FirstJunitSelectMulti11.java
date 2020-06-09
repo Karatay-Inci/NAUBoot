@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class FirstJunitSelectMulti {
+public class FirstJunitSelectMulti11 {
 
     static WebDriver driver;
     static String baseURL;

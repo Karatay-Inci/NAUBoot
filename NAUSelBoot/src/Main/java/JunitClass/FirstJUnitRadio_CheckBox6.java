@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FirstJUnitRadio_CheckBox {
+public class FirstJUnitRadio_CheckBox6 {
     static WebDriver driver;
     static String baseURL;
 
