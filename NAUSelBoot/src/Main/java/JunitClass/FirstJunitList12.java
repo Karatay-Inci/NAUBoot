@@ -55,7 +55,7 @@ public class FirstJunitList12 {
         List<WebElement> listAuthor = driver.findElements(By.xpath("//table[@class='table-display']//td[1]"));
         List<WebElement> listCourse = driver.findElements(By.xpath("//table[@class='table-display']//td[2]"));
         List<WebElement> listPrice= driver.findElements(By.xpath("//table[@class='table-display']//td[3]"));
-
+        List<WebElement> listLocation= driver.findElements(By.xpath("//table[@class='table-display']//td[4]"));
 
         for (WebElement hele: listHead) {
             System.out.println("Table Header is:"+hele.getText());
@@ -68,6 +68,28 @@ public class FirstJunitList12 {
         }
         for (WebElement pele: listPrice) {
             System.out.println("Price is:"+pele.getText());
+        }
+
+        int headSize = listHead.size();
+        System.out.println("header element size :"+ headSize);
+        if (headSize>0){
+            for (WebElement hele: listHead) {
+                System.out.println("Table Header is:"+hele.getText());
+            }
+        }
+        else{
+            System.out.println("Header element not found");
+        }
+
+        int locationSize = listLocation.size();
+        System.out.println("Location element size:"+locationSize);
+        if (locationSize>0){
+            for (WebElement locationEle : listLocation){
+                System.out.println("4th column element is:"+locationEle.getText());
+            }
+        }
+        else{
+            System.out.println("4th column element not found");
         }
     }
 }
