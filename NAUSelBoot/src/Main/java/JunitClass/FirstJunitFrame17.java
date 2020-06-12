@@ -35,7 +35,13 @@ public class FirstJunitFrame17 {
     @Test
     public void test1() throws InterruptedException {
         Thread.sleep(10000);
-        driver.switchTo().frame("courses-iframe");
+        WebElement iframeEle = driver.findElement(By.xpath("//*[contains(@src,'courses')]"));
+
+        //driver.switchTo().frame("courses-iframe");    //by ID
+        //driver.switchTo().frame("iframe-name");   //by name
+       // driver.switchTo().frame(iframeEle); //by WebElement reference
+       driver.switchTo().frame(0); //by zero based index position of iframe in the dom
+
         List<WebElement> findCourse =driver.findElements(By.xpath("//input[@placeholder='Find a course']"));
         if (findCourse.size()>0){
             findCourse.get(0).sendKeys("my proper course");
@@ -44,7 +50,10 @@ public class FirstJunitFrame17 {
         }
         else{
             System.out.println("Did not find the element on the page");
-
         }
+        driver.switchTo().defaultContent(); // switch focus back to the parent page and outside of iframes
+        Thread.sleep(5000);
+        driver.findElement(By.id("name")).sendKeys("my name is");
+        Thread.sleep(5000);
     }
 }
