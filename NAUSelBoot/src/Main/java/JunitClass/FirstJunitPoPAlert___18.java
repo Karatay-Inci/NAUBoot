@@ -3,14 +3,13 @@ package Main.java.JunitClass;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-public class FirstJunitFrame17 {
+public class FirstJunitPoPAlert___18 {
 
     static WebDriver driver;
     static String baseURL;
@@ -33,26 +32,29 @@ public class FirstJunitFrame17 {
 
     @Test
     public void test1() throws InterruptedException {
-        Thread.sleep(10000);
-        WebElement iframeEle = driver.findElement(By.xpath("//*[contains(@src,'courses')]"));
-
-        //driver.switchTo().frame("courses-iframe");    //by ID
-        //driver.switchTo().frame("iframe-name");   //by name
-       // driver.switchTo().frame(iframeEle); //by WebElement reference
-       driver.switchTo().frame(0); //by zero based index position of iframe in the dom
-
-        List<WebElement> findCourse =driver.findElements(By.xpath("//input[@placeholder='Find a course']"));
-        if (findCourse.size()>0){
-            findCourse.get(0).sendKeys("my proper course");
-            System.out.println("Found the element on the page");
-            Thread.sleep(5000);
-        }
-        else{
-            System.out.println("Did not find the element on the page");
-        }
-        driver.switchTo().defaultContent(); // switch focus back to the parent page and outside of iframes
+        Alert alrt;         // create Alert class object
         Thread.sleep(5000);
-        driver.findElement(By.id("name")).sendKeys("my name is");
+
+        WebElement alertBtn = driver.findElement(By.id("alertbtn"));
+        WebElement confirmBtn = driver.findElement(By.id("confirmbtn"));
+        WebElement nameEle = driver.findElement(By.id("name"));
+
+        nameEle.sendKeys("NABOOT");
+        alertBtn.click();
+        Thread.sleep(5000);
+
+        alrt = driver.switchTo().alert();   //switches to a javascript alert that opens at browser level
+        System.out.println("alert text is:"+alrt.getText());    //alert box text retrieved
+        alrt.accept();
+        Thread.sleep(5000);
+
+        nameEle.sendKeys("NABOOT");
+        confirmBtn.click();
+        Thread.sleep(5000);
+
+        alrt = driver.switchTo().alert();      //switches to a javascript alert that opens at browser level
+        System.out.println("alert text is:"+alrt.getText());    //alert box text retrieved for confirm popup
+        alrt.dismiss();
         Thread.sleep(5000);
     }
 }
