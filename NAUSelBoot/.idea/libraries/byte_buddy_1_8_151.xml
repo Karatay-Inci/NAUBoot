@@ -11,6 +11,7 @@
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/junit-jupiter-api-5.6.2.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/junit-platform-commons-1.6.2.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/opentest4j-1.2.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/commons-io-2.6.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

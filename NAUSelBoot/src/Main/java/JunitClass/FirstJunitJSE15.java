@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 @TestMethodOrder(MethodOrderer.Alphanumeric.class)
-public class FirstJunitJSE___15 {
+public class FirstJunitJSE15 {
 
     static WebDriver driver;
     static String baseURL;
@@ -68,9 +68,9 @@ public class FirstJunitJSE___15 {
     @Test
     public void scrollView() throws InterruptedException {  //scroll in to a given element view instead of hard coded x, y co-ordinate
         Thread.sleep(20000);
-       // WebElement agree= driver.findElement(By.xpath("a[text()='ONline banling Service Agreement']"));
-        WebElement agree=
-                (WebElement) jse.executeScript("return document.getElementById(argument[0])","footer_bofa_online_banking_service_agreement") ;
+        WebElement agree= driver.findElement(By.id("footer_bofa_online_banking_service_agreement"));
+       // WebElement agree=
+         //       (WebElement) jse.executeScript("return document.getElementsById(argument[0])","footer_bofa_online_banking_service_agreement") ;
         jse.executeScript("arguments[0].scrollIntoView(true)",agree);
     }
 
