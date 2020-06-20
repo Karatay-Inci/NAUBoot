@@ -12,6 +12,10 @@
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/junit-platform-commons-1.6.2.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JUNIT/opentest4j-1.2.0.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/commons-io-2.6.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JULY 4 testNG/guice-4.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JULY 4 testNG/jcommander-1.72.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JULY 4 testNG/snakeyaml-1.21.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SELENIUM/JULY 4 testNG/testng-7.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

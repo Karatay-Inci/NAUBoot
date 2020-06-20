@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 @TestMethodOrder(MethodOrderer.Alphanumeric.class)
 public class FirstJunitJSE15 {
-
     static WebDriver driver;
     static String baseURL;
     static JavascriptExecutor jse;
