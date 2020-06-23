@@ -36,12 +36,12 @@ public class FirstJunitFluentrWait___22 {
     @Test
     public void test1() {
       //  WebDriverWait wait = new WebDriverWait(driver, 5);
-        FluentWait<WebDriver> wait = new FluentWait<>(driver)
+  /*      FluentWait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))   // how much total wait time
                 .pollingEvery(Duration.ofSeconds(2))    // how much frequency of each wait
-                .ignoring(NoSuchElementException.class);  //ignore exception classes
-
-        WebElement academy = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(@href,'khanacademy')]")));
+                .ignoring(NoSuchElementException.class);  //ignore exception classes*/
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement academy = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@href,'khanacademy')]")));
         academy.click();
         System.out.println("@Test1 - executed test");
     }

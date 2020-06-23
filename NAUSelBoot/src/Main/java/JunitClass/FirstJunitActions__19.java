@@ -30,7 +30,7 @@ public class FirstJunitActions__19 {
     @AfterAll
     public static void tearDown() throws IOException {
         RandomString1 rString = new RandomString1();
-        String fileNm = System.getProperty("user.dir")+"/src/Snippets/screenshot1"+rString.getRandom(5)+".png";//June 3, 32. min
+        String fileNm = System.getProperty("user.dir")+"\\src\\snippets\\"+rString.getRandom(5)+".png";//June 3, 32. min
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
         FileUtils.copyFile(srcFile, new File(fileNm)); //1. sayfa degil 2. sayfanin screen shot aldi,neden?
