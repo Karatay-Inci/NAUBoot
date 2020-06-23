@@ -54,7 +54,7 @@ public class A9_TNG_Dependency extends A6TNG_Suite {
 
         Thread.sleep(5000);
         String currUrl = driver.getCurrentUrl();
-        Assert.assertEquals("https://foru.jquery.com/",currUrl,"url mismatch!!!");
+        Assert.assertEquals("https://forum.jquery.com/",currUrl,"url mismatch!!!");
         System.out.println("@Test1 - currUrl is : "+currUrl);
         System.out.println("Class1 - @Test1 method");
     }
