@@ -2,7 +2,7 @@ package Main.java.testNGclasses;
 
 import org.testng.annotations.*;
 
-public class A5_TNG_Class__Method2 extends A6TNG_Suite{
+public class A5_TNG_Class__Method7 {
 
     @BeforeClass    //similar to @BeforeAll in junit
     public void setUp(){
