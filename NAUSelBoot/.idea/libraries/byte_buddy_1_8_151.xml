@@ -16,6 +16,10 @@
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JULY 4 testNG/jcommander-1.72.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JULY 4 testNG/snakeyaml-1.21.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/SELENIUM/JULY 4 testNG/testng-7.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/extentreports-2.41.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/freemarker-2.3.30.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jsoup-1.13.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/sqlite-jdbc-3.31.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

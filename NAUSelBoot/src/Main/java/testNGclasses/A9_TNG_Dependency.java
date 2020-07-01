@@ -11,7 +11,8 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
 
-public class A9_TNG_Dependency {
+public class A9_TNG_Dependency
+{
 
     static WebDriver driver;
     static String baseURL;

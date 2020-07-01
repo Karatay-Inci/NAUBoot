@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class A10_TNG_Parameters {
+public class A10_TNG_Parameters__ {
 
     static WebDriver driver;
     static String baseURL;
