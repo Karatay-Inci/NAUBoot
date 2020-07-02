@@ -5,7 +5,7 @@ import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-public class CustomListener1 implements IInvokedMethodListener {
+public class C_2CustomListener1 implements IInvokedMethodListener {
 
     public void beforeInvocation (IInvokedMethod method, ITestResult result){
         System.out.println("before Invocation:"+result.getTestClass().getName()+

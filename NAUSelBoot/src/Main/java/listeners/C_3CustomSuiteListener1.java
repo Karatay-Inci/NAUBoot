@@ -4,7 +4,7 @@ import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.Reporter;
 
-public class CustomSuiteListener1 implements ISuiteListener {
+public class C_3CustomSuiteListener1 implements ISuiteListener {
     @Override
     public void onFinish(ISuite suite) {
         System.out.println("onFinish="+suite.getName());

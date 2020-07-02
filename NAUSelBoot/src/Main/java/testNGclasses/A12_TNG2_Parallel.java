@@ -1,4 +1,5 @@
 package Main.java.testNGclasses;
+import Main.java.listeners.C_1CustomITestListener1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
@@ -9,8 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass; //you can use just this "import org.testng.annotations.*;" for 4-5-6 lines
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners({C_1CustomITestListener1.class})
 public class A12_TNG2_Parallel {
     WebDriver driver;
     Actions action;

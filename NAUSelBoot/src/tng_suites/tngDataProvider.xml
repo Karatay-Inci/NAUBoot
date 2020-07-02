@@ -2,7 +2,7 @@
 <suite name="JQUERY Tests">
     <test name ="All link test">
         <classes>
-            <class name="Main.java.testNGclasses.A13__DataProvider__empty"></class>
+            <class name="Main.java.testNGclasses.A13__TNG_DataProvider__empty"></class>
         </classes>
     </test>
 </suite>

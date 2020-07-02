@@ -5,7 +5,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-public class CustomTestListener1 implements ITestListener {
+public class C_1CustomITestListener1 implements ITestListener {
     //1.11
 
     @Override
