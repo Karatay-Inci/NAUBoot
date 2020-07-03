@@ -15,8 +15,10 @@ public class C_2CustomListener1 implements IInvokedMethodListener {
     }
     public void afterInvocation (IInvokedMethod method, ITestResult result){
         System.out.println("after Invocation:"+result.getTestClass().getName()+
-                "===>"+method.getTestMethod().getMethodName());
+                "===>"+method.getTestMethod().getMethodName()+
+                "===>"+ result.isSuccess());
         Reporter.log("after Invocation:"+result.getTestClass().getName()+
-                "===>"+method.getTestMethod().getMethodName(),true);
+                "===>"+method.getTestMethod().getMethodName()+
+                "===>"+result.isSuccess(),true);
     }
 }

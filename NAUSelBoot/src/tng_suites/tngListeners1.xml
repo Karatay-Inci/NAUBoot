@@ -2,7 +2,7 @@
 <suite name="JQUERY Tests">
     <test name ="All links test">
         <classes>
-            <class name="Main.java.testNGclasses.A14__TNG_Listener1__empty"></class>
+            <class name="Main.java.testNGclasses.A14__TNG_Listener1"></class>
         </classes>
     </test>
 </suite>

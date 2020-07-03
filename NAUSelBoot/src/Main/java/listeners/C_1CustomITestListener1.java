@@ -1,13 +1,8 @@
 package Main.java.listeners;
 
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
-import org.testng.Reporter;
+import org.testng.*;
 
 public class C_1CustomITestListener1 implements ITestListener {
-    //1.11
-
     @Override
     public void onTestStart(ITestResult result) {
         System.out.println("onTestStart="+result.getName());
@@ -51,8 +46,11 @@ public class C_1CustomITestListener1 implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         System.out.println("onStart="+context.getName());
-        Reporter.log("onStart" +context.getName(),true);
-
+        ITestNGMethod methods[] = context.getAllTestMethods();
+        for (ITestNGMethod method: methods) {
+            System.out.println(method.getMethodName());
+            Reporter.log("onStart" + context.getName(), true);
+        }
     }
 
     @Override
