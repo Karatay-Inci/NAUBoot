@@ -1,5 +1,6 @@
 package Main.java.testNGclasses;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class A1TNGTest {
@@ -17,5 +18,8 @@ public class A1TNGTest {
     public void test3(){
         System.out.println("@Test3 method");
     }
-
+    @Test
+    public void test4(){
+        Assert.assertFalse(false);
+    }
 }

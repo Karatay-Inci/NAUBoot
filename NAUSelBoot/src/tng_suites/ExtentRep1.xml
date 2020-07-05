@@ -3,13 +3,15 @@
     <test name="some test1">
         <parameter name="linknm" value="Events"></parameter>
         <classes>
-            <class name="Main.java.testNGclasses.A15_TNG_Extent"></class>
+            <class name="Main.java.testNGclasses.A15_TNG_Extent1"></class>
+            <class name="Main.java.testNGclasses.A15_TNG_Extent2"></class>
         </classes>
     </test>
     <test name="some test2">
         <parameter name="linknm" value="Plugins"></parameter>
         <classes>
-            <class name="Main.java.testNGclasses.A15_TNG_Extent"></class>
+            <class name="Main.java.testNGclasses.A15_TNG_Extent1"></class>
+            <class name="Main.java.testNGclasses.A15_TNG_Extent2"></class>
         </classes>
     </test>
 </suite>
