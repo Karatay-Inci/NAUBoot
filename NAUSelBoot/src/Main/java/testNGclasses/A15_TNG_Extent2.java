@@ -10,6 +10,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -17,63 +18,37 @@ import java.io.File;
 import java.io.IOException;
 
 @Listeners({C_2CustomListener1.class, C_1CustomITestListener1.class, C_3CustomSuiteListener1.class})
-public class A15_TNG_Extent2 {
+public class A15_TNG_Extent2  extends A15_TNG_ExtentSuite{
 
-    WebDriver driver;
-    String baseUrl;
-    ExtentReports report;
-    ExtentTest eTest;
-
-    @BeforeTest//@BeforeSuite
-    public void setup(){
-        baseUrl = "https://jqueryui.com/";
-        report = new ExtentReports("/Users/incikaratay/git/NAUSelBoot/src/Main/java/reports/ereport.html");
-        eTest = report.startTest("Reporter Demo");
-        eTest.log(LogStatus.INFO,"Test stared...");
-
-        System.setProperty("webdriver.chrome.driver", "/Users/incikaratay/Desktop/SELENIUM/chromedriver");
-        driver = new ChromeDriver();
-        driver.get(baseUrl);
-        driver.manage().window().maximize();
-        eTest.log(LogStatus.INFO,"Opened browser, maximized...");
+    @Parameters({"linknm"})
+    @BeforeClass
+    public void beforeClass(String linknm){
+        report = A16_ExtentFactory.getExTentInstance();
+        eTest = report.startTest(":Extent1");
     }
 
-    @AfterTest//@AfterSuite
-    public void  tearDown() throws IOException {
-        RandomString1 rString = new RandomString1();
-        String fileNm = System.getProperty("user.dir") + "\\src\\snippets\\" + rString.getRandom(5) + ".png";//June 3, 32. min
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile, new File(fileNm));
-        String imgPath = eTest.addScreenCapture(fileNm);
-        eTest.log(LogStatus.ERROR,"some error screenshot", imgPath);
-
-        driver.quit();
+    @AfterClass
+    public void afterClass(){
+        driver.navigate().back();
         report.endTest(eTest);
         report.flush();
-    }
-
-    //@AfterTest
-    public void navBack(){
-        driver.navigate().back();
     }
 
     @Parameters({"linknm"})
     @Test
     public void eventsTest(String linknm){
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         eTest.log(LogStatus.INFO,"inside eventsTest...");
-
         WebElement desiredLink = driver.findElement(By.linkText("Events"));
         desiredLink.click();
         String currUrl = driver.getCurrentUrl();
         if(linknm.equals("Events")) {
             Assert.assertEquals(currUrl, "https://openjsf.org/");
-            eTest.log(LogStatus.PASS, "eventsTest: PASS...");
-        }
-            else {
+        } else {
             Assert.assertEquals(currUrl, "https://plugins.jquery.com/");
-            eTest.log(LogStatus.PASS, "eventsTest: PASS...");
-            }
         }
+        eTest.log(LogStatus.PASS, "eventsTest: PASS");
+    }
 
     @Parameters({"Linknm"})
     @Test
@@ -82,8 +57,7 @@ public class A15_TNG_Extent2 {
         WebElement logo, headerText;
         if (clickLink.equals("Events")){
             logo   = driver.findElement(By.xpath("//img[@alt='OpenJS Foundation']/parent::a"));
-        }
-        else {
+        } else {
             logo = driver.findElement(By.linkText("jQuery Plugin Registry"));
         }
         logo.click();
@@ -99,5 +73,14 @@ public class A15_TNG_Extent2 {
             eTest.log(LogStatus.PASS, "insideValidations PASS");
 
         }
+    }
+    @AfterMethod
+    public void afterMethod() throws IOException {
+        RandomString rString = new RandomString();
+        String fileNm = System.getProperty("user.dir") /*+ "\\src\\snippets\\" + rString.genRandom(5) + ".png"*/;
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(fileNm));
+        String imgPath = eTest.addScreenCapture(fileNm);
+        eTest.log(LogStatus.ERROR, "some error screenshot", imgPath);
     }
 }

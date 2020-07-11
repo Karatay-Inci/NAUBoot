@@ -89,7 +89,7 @@ public class A15_TNG_Extent {
         logo.click();
 
         if (clickLink.equals("Events")) {
-            headerText = driver.findElement(By.xpath("//div[contains(@class, 'instance-1')]//div[@class='nectar-gradient-text']h3"));
+            headerText = driver.findElement(By.xpath("//div[contains(@class, 'instance-1')]//div[@class='nectar-gradient-text']/h3"));
             Assert.assertTrue(headerText.getText().equals("Welcome Electron!"));
             eTest.log(LogStatus.PASS, "insideValidations PASS");
 
