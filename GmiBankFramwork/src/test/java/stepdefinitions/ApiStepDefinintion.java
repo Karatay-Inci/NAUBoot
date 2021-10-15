@@ -1,7 +1,7 @@
 package stepdefinitions;
 
 import cucumber.api.java.en.Given;
-import gmibank.utilities.ConfigurationReader;
+import utilities.ConfigurationReader;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import utilities.ConfigurationReader;

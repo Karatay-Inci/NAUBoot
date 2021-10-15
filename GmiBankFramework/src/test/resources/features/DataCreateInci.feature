@@ -1,5 +1,5 @@
+#authorInci
 Feature: US_011 Date should be created on the time of customer creation
-
   @US-011
   Scenario: TC_0004_07 User can choose an account created on manage accounts
     Given Go to GMIBank page

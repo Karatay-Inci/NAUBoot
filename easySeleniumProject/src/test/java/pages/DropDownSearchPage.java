@@ -1,2 +1,4 @@
-package pages;public class DropDownSearchPage {
+package pages;
+
+public class DropDownSearchPage {
 }

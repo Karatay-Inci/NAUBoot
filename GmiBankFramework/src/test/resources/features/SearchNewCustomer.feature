@@ -1,4 +1,5 @@
 Feature: Go To Home Page
+
   Scenario:As an Employee User valid login
     Given Go to GMIBank home page
     And click to login module and sign in

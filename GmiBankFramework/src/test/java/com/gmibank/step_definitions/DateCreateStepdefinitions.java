@@ -12,7 +12,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-
 public class DateCreateStepdefinitions {
 
     WebElement driver;
@@ -21,7 +20,6 @@ public class DateCreateStepdefinitions {
     Faker faker=new Faker();
     String ssn=faker.random().nextInt(100,999)
             +"-"+faker.random().nextInt(10,99)+"-"+faker.random().nextInt(1000,9999);
-
 
     @Given("Go to GMIBank page")
     public void go_to_GMIBank_page() {
@@ -37,7 +35,6 @@ public class DateCreateStepdefinitions {
         us011.password.sendKeys(ConfigurationReader.getProperty("employee_password"));
         us011.signInButton.click();
     }
-
     @Given("Select My Operations Menu")
     public void select_My_Operations_Menu() {
        us011.myOperations.click();
@@ -57,9 +54,7 @@ public class DateCreateStepdefinitions {
     public void fill_out_valid_SSN() throws InterruptedException {
         us011.user_ssn.sendKeys(ssn);
         Thread.sleep(2000);
-
     }
-
 //    @Given("Click search button")
 //    public void click_search_button() {
 //        us011.searchbutton.click();
@@ -89,13 +84,11 @@ public class DateCreateStepdefinitions {
         us011.mobileNumber.sendKeys(faker.random().nextInt(100,999)
                 +"-"+faker.random().nextInt(100,999)+"-"+faker.random().nextInt(1000,9999));
     }
-
     @Given("Fill out valid phone number")
     public void fill_out_valid_phone_number() {
         us011.phoneNumber.sendKeys(faker.random().nextInt(100,999)
                 +"-"+faker.random().nextInt(100,999)+"-"+faker.random().nextInt(1000,9999));
     }
-
     @Given("Fill out valid zip code")
     public void fill_out_valid_zip_code() {
         us011.zipcode.sendKeys(faker.number().digit());
@@ -110,10 +103,12 @@ public class DateCreateStepdefinitions {
     public void fill_out_valid_city() {
         us011.city.sendKeys(faker.address().city());
     }
+
     @Given("Fill out valid ssn")
     public void fill_out_valid_ssn(){
         us011.checkssn.sendKeys(ssn);
     }
+
     @Given("Fill out valid country")
     public void fill_out_valid_country() {
         Select ls=new Select(us011.country);
@@ -130,15 +125,12 @@ public class DateCreateStepdefinitions {
         Select ls=new Select(us011.account);
         ls.selectByIndex(0);
     }
-
     @Then("Not Select Zelle Enrolled")
     public void not_Select_Zelle_Enrolled() {
         if(us011.zelle.isSelected()){
             us011.zelle.click();
         }
-
     }
-
     @Then("Save it")
     public void save_it() {
         us011.save.click();
@@ -150,5 +142,4 @@ public class DateCreateStepdefinitions {
         Assert.assertEquals(CommonMethods.jsGetInnerText(us011.toastMessage),
                 "translation-not-found[gmiBankBackendApp.tPCustomer.created]");
     }
-
 }

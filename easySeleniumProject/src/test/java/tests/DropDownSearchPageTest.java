@@ -1,2 +1,4 @@
-package tests;public class DropDownSearchPageTest {
+package tests;
+
+public class DropDownSearchPageTest {
 }

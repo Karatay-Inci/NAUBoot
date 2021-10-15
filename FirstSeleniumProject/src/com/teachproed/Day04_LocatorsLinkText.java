@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Day03_LocatorsLinkText {
+public class Day04_LocatorsLinkText {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","/Users/incikaratay/Desktop/SELENIUM/chromedriver2");
         WebDriver driver=new ChromeDriver();

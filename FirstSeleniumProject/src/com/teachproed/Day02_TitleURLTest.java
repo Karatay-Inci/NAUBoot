@@ -3,7 +3,7 @@ package com.teachproed;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Day02_TitlieURLTest {
+public class Day02_TitleURLTest {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","/Users/incikaratay/Desktop/SELENIUM/chromedriver2");
         WebDriver driver=new ChromeDriver();

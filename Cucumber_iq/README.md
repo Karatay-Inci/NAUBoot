@@ -1,0 +1,11 @@
+Required Dependency
+-->cucumber-core
+-->cucumber-html
+-->cucumber-java
+-->cucumber-junit
+-->cucumber-jvm-deps
+-->cucumber-reporting
+-->hamcrest-core
+-->gherkin
+-->selenium-java
+-->junit

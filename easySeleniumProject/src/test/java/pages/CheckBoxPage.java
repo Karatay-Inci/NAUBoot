@@ -1,2 +1,4 @@
-package pages;public class CheckBoxPage {
+package pages;
+
+public class CheckBoxPage {
 }

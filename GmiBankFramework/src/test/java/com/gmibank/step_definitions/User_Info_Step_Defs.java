@@ -4,13 +4,9 @@ import com.gmibank.pages.CommonPageElements;
 import com.gmibank.pages.UserInfo;
 import com.gmibank.utilities.ConfigurationReader;
 import com.gmibank.utilities.Driver;
-import com.sun.tools.jxc.ConfigReader;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.List;
@@ -79,7 +75,7 @@ public class User_Info_Step_Defs {
         String email = userInfo.email.getAttribute("value");
         Assert.assertEquals(email, string);
     }
-
+/*
     @Then("user verifies languages are available")
     public void user_verifies_languages_are_available() {
         Select select1 = new Select(userInfo.language);
@@ -98,7 +94,7 @@ public class User_Info_Step_Defs {
             Assert.assertEquals(actualTr, "Turkish");
         }
     }
-
+*/
     @Then("user verify if firstname is updatable with {string}")
     public void user_verify_if_firstname_is_updatable_with(String string) {
         userInfo.firstName.clear();
